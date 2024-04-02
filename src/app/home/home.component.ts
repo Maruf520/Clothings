@@ -4,6 +4,7 @@ import { Product, Products } from '../../types';
 import { ProductComponent } from '../components/product/product.component';
 import { CommonModule } from '@angular/common';
 
+
 @Component({
   selector: 'app-home',
   standalone: true,
@@ -15,6 +16,10 @@ export class HomeComponent {
 constructor(private productService: ProductsService){}
 
 products: Product[] = [];
+
+OnProductOutput(product: Product){
+  console.log(product, 'OutPut');
+}
 
 ngOnInit(){
   this.productService.getProducts('http://localhost:3000/clothes',{
