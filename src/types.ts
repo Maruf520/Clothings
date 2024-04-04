@@ -25,6 +25,7 @@ totalPages: number;
 }
 
 export interface Product{
+    id: number;
     price: string;
     name: string;
     image: string;
@@ -32,7 +33,11 @@ export interface Product{
 }
 
 export interface PaginationParams{
-[key: string]: string | number | boolean | ReadonlyArray<string | number | boolean>;
-page: number;
-perpage: number;
+    [param: string]:
+    | string
+    | number
+    | boolean
+    | ReadonlyArray<string | number | boolean>;
+  page: number;
+  perPage: number;
 }
