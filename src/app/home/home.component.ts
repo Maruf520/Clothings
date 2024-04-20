@@ -43,7 +43,7 @@ toggleAddPopup() {
 
 toggleDeletePopup(product: Product){
   this.selectedProduct = product;
-  this.displayEditPopup = true;
+  this.displayEditPopup = false;
 }
 
 onConfirmEdit(product: Product){
