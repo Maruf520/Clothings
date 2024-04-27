@@ -23,7 +23,6 @@ export class ProductComponent {
   @Output() edit: EventEmitter<Product> = new EventEmitter<Product>();
   @Output() delete: EventEmitter<Product> = new EventEmitter<Product>();
 
-
   editProduct(){
     this.edit.emit(this.product);
   }
@@ -43,6 +42,6 @@ export class ProductComponent {
   }
 
   ngOnInit(){
-    this.edit.emit(this.product);
+    //this.edit.emit(this.product);
   }
 }

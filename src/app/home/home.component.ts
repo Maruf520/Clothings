@@ -24,13 +24,7 @@ rows: number = 5;
 displayEditPopup: boolean = false;
 displayAddPopup: boolean = false;
 
-selectedProduct: Product = {
-  id: 0,
-  name: '',
-  image: '',
-  price: '',
-  rating: 0,
-};
+
 
 toggleEditPopup(product: Product){
   this.selectedProduct = product;
@@ -40,6 +34,14 @@ toggleEditPopup(product: Product){
 toggleAddPopup() {
   this.displayAddPopup = true;
 }
+
+selectedProduct: Product = {
+  id: 0,
+  name: '',
+  image: '',
+  price: '',
+  rating: 0,
+};
 
 toggleDeletePopup(product: Product){
   this.selectedProduct = product;
